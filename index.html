@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Oréal Paris - Because You're Worth It</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="New Folder/Loreal-Logo-PNG1.png" alt="L'Oréal Paris" class="logo">
+            </div>
+            <div class="nav-menu">
+                <a href="#skincare" class="nav-link">Skin Care</a>
+                <a href="#haircare" class="nav-link">Hair Care</a>
+                <a href="#makeup" class="nav-link">Makeup</a>
+                <a href="#haircolor" class="nav-link">Hair Color</a>
+                <a href="#virtual-tools" class="nav-link">Virtual Tools</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+            <div class="nav-actions">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+                <button class="cart-btn"><i class="fas fa-shopping-bag"></i></button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background: linear-gradient(135deg, #d4af37, #ffd700);">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Shine Beyond Limits</h1>
+                        <h2 class="hero-subtitle">With Glycolic Gloss Range</h2>
+                        <p class="hero-description">Transform your hair with our revolutionary Glycolic Acid Complex-powered range that delivers mirror-like shine and activates more gloss.</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary">Discover Now</button>
+                            <button class="btn btn-secondary">Watch Video</button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="video-placeholder">
+                            <video autoplay muted loop class="hero-video">
+                                <source src="New folder/download (5).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <h3>Glycolic Gloss Range</h3>
+                                <p>Transform Your Hair</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-slide" style="background: linear-gradient(135deg, #ff6b9d, #f093fb);">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Hyaluronic Acid</h1>
+                        <h2 class="hero-subtitle">For Radiant Skin</h2>
+                        <p class="hero-description">Unlock the power of Hyaluronic Acid for deep hydration and youthful, glowing skin that feels soft and supple all day long.</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary">Shop Now</button>
+                            <button class="btn btn-secondary">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="video-placeholder">
+                            <video autoplay muted loop class="hero-video">
+                                <source src="New folder/download (7).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <h3>Hyaluronic Acid</h3>
+                                <p>For Radiant Skin</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-slide" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Virtual Beauty Tools</h1>
+                        <h2 class="hero-subtitle">Beauty Is Smarter Now</h2>
+                        <p class="hero-description">Try on makeup, hair colors, and analyze your skin with our advanced AI-powered virtual beauty tools.</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary">Try Now</button>
+                            <button class="btn btn-secondary">Explore Tools</button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="video-placeholder">
+                            <video autoplay muted loop class="hero-video">
+                                <source src="New folder/download (8).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <h3>Virtual Beauty Tools</h3>
+                                <p>Beauty Is Smarter Now</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-nav">
+            <div class="hero-nav-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Discover the All-New Glycolic Gloss Range</h2>
+                <p class="section-subtitle">Glycolic Gloss is here to transform your hair! From shampoo, conditioner to serum & acidifier.</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="video-placeholder">
+                            <video autoplay muted loop class="product-video">
+                                <source src="New folder/download (10).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <h4>LOréal Paris Infallible Matte Resistance Liquid Lipstick - 601</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">LOréal Paris Infallible Matte Resistance Liquid Lipstick - 601</h3>
+                        <!-- <p class="product-description">340ml of pure transformation for your hair</p> -->
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">5.0 (120 reviews)</span>
+                        </div>
+                        <div class="product-price">₹899</div>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="video-placeholder">
+                            <video autoplay muted loop class="product-video">
+                                <source src="New folder/download (12).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <h4> L'Oréal Paris Matte Signature liquid eyeliner</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name"> L'Oréal Paris Matte Signature liquid eyeliner</h3>
+                        <!-- <p class="product-description">175ml of intensive conditioning care</p> -->
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.8 (95 reviews)</span>
+                        </div>
+                        <div class="product-price">₹699</div>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="video-placeholder">
+                            <video autoplay muted loop class="product-video">
+                                <source src="New folder/download (13).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <h4>Glycolic Gloss Serum</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Glycolic Gloss Leave-in Serum</h3>
+                        <!-- <p class="product-description">40ml of concentrated hair perfection</p> -->
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.9 (78 reviews)</span>
+                        </div>
+                        <div class="product-price">₹1,299</div>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Beauty Tools Section -->
+    <section class="virtual-tools" id="virtual-tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Beauty Is Smarter Now</h2>
+                <p class="section-subtitle">Experience the future of beauty with our AI-powered virtual tools</p>
+            </div>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3 class="tool-title">Skin Genius</h3>
+                    <p class="tool-description">Analyze your skin and discover your daily skin care routine with our routine finder</p>
+                    <button class="btn btn-outline">Try Now</button>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="tool-title">Hair Color Try On</h3>
+                    <p class="tool-description">Test your favorite hair color virtually before making the change</p>
+                    <button class="btn btn-outline">Try Now</button>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="tool-title">Makeup Try On</h3>
+                    <p class="tool-description">Test your favorite makeup virtually with our advanced AR technology</p>
+                    <button class="btn btn-outline">Try Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Explore All L'Oréal Paris Products</h2>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card" style="background: linear-gradient(135deg, rgba(255,182,193,0.8), rgba(255,192,203,0.8));">
+                    <div class="category-content">
+                        <h3 class="category-title">Skin Care</h3>
+                        <p class="category-description">Discover skincare solutions for every skin type and concern</p>
+                        <button class="btn btn-white">Shop Now</button>
+                    </div>
+                </div>
+                
+                <div class="category-card" style="background: linear-gradient(135deg, rgba(138,43,226,0.8), rgba(147,112,219,0.8));">
+                    <div class="category-content">
+                        <h3 class="category-title">Hair Care</h3>
+                        <p class="category-description">Professional hair care for beautiful, healthy hair</p>
+                        <button class="btn btn-white">Shop Now</button>
+                    </div>
+                </div>
+                
+                <div class="category-card" style="background: linear-gradient(135deg, rgba(255,105,180,0.8), rgba(255,20,147,0.8));">
+                    <div class="category-content">
+                        <h3 class="category-title">Makeup</h3>
+                        <p class="category-description">Express yourself with our extensive makeup collection</p>
+                        <button class="btn btn-white">Shop Now</button>
+                    </div>
+                </div>
+                
+                <div class="category-card" style="background: linear-gradient(135deg, rgba(255,140,0,0.8), rgba(255,165,0,0.8));">
+                    <div class="category-content">
+                        <h3 class="category-title">Hair Color</h3>
+                        <p class="category-description">Transform your look with professional hair coloring</p>
+                        <button class="btn btn-white">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Keep Your Skin & Hair Healthy & Happy!</h2>
+                <p class="section-subtitle">Discover beauty tips, trends, and expert advice</p>
+            </div>
+            
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="New Folder/Images/1761731298354_content.png" alt="L'Oréal Beauty Content">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Beauty Tips</span>
+                        <h3 class="blog-title">Unlock the Secrets of Professional Beauty Techniques</h3>
+                        <p class="blog-excerpt">Discover the latest beauty trends and professional makeup techniques from L'Oréal Paris...</p>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="New Folder/Images/1761800836298_content.png" alt="L'Oréal Hair Care">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Hair Care</span>
+                        <h3 class="blog-title">Transform Your Hair with Professional Care</h3>
+                        <p class="blog-excerpt">Learn about the revolutionary hair care solutions that deliver salon-quality results at home...</p>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="New Folder/Images/1761801890173_content.png" alt="L'Oréal Skin Care">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Skin Care</span>
+                        <h3 class="blog-title">Advanced Skincare for Radiant Complexion</h3>
+                        <p class="blog-excerpt">Explore cutting-edge skincare innovations that reveal your skin's natural beauty and glow...</p>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="New Folder/Images/1762321382550_content.png" alt="L'Oréal Innovation">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Innovation</span>
+                        <h3 class="blog-title">Beauty Innovation Meets Science</h3>
+                        <p class="blog-excerpt">Discover how L'Oréal Paris combines scientific research with beauty expertise for breakthrough products...</p>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Our Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Skin Care</a></li>
+                        <li><a href="#">Hair Care</a></li>
+                        <li><a href="#">Hair Color</a></li>
+                        <li><a href="#">Makeup</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Virtual Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Skin Genius</a></li>
+                        <li><a href="#">Hair Color Try On</a></li>
+                        <li><a href="#">Makeup Try On</a></li>
+                        <li><a href="#">Beauty Studio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Our Commitments</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Sustainable Growth</a></li>
+                        <li><a href="#">Stand Up</a></li>
+                        <li><a href="#">The Other Side</a></li>
+                        <li><a href="#">Dermatologist Board</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <img src="https://www.lorealparis.co.in/-/media/project/loreal/brand-sites/oap/master/dmi/brand-logos/brand-logo-lop.svg" alt="L'Oréal Paris">
+                </div>
+                <p class="footer-tagline">Because You're Worth It</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <p class="footer-copyright">© 2025 L'Oréal Paris. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
