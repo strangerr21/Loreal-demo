@@ -8,6 +8,11 @@ const navbar = document.querySelector('.navbar');
 // Global Variables
 let currentSlide = 0;
 let slideInterval;
+let productSlideIndex = 0;
+const totalProductSlides = 9; // 9 total images
+const visibleSlides = 3; // 3 images visible at once
+// const totalPages = Math.ceil(totalProductSlides / visibleSlides); // 3 pages
+const maxSlideIndex = totalProductSlides - visibleSlides; // Maximum slide position (6)
 
 // Initialize the website
 document.addEventListener('DOMContentLoaded', function() {
@@ -16,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavigation();
     initVideoPlaceholders();
     initSmoothScrolling();
+    initProductSlider();
 });
 
 // Hero Slider Functionality
@@ -178,7 +184,6 @@ function showVideoModal(videoNumber) {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                z-index: 10000;
                 animation: fadeIn 0.3s ease;
             }
             
@@ -634,3 +639,99 @@ const optimizedScrollHandler = debounce(() => {
 }, 16); // ~60fps
 
 window.addEventListener('scroll', optimizedScrollHandler);
+
+// Product Slider Functionality
+function initProductSlider() {
+    // Auto-play the product slider
+    setInterval(() => {
+        moveSlider(1);
+    }, 4000); // Change slide every 4 seconds
+    
+    // Touch/swipe support for mobile
+    let startX = 0;
+    let endX = 0;
+    
+    const sliderContainer = document.querySelector('.slider-container');
+    
+    sliderContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+    
+    sliderContainer.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        const threshold = 50;
+        const diff = startX - endX;
+        
+        if (Math.abs(diff) > threshold) {
+            if (diff > 0) {
+                moveSlider(1); // Swipe left, go to next
+            } else {
+                moveSlider(-1); // Swipe right, go to previous
+            }
+        }
+    }
+}
+
+/* ✅ FIXED PRODUCT SLIDER (Page-Based 3-at-a-time, auto-sliding forever) */
+
+let page = 0;                 // current page
+const totalPages = 3;         // 9 slides / 3 visible = 3 pages
+let productSliderInterval;
+
+function moveSlider(direction) {
+    page += direction;
+    if (page < 0) page = totalPages - 1;
+    if (page >= totalPages) page = 0;
+    updateProductSlider();
+}
+window.moveSlider = moveSlider;
+
+function goToPage(p) {
+    page = p;
+    updateProductSlider();
+}
+window.goToPage = goToPage;
+
+function updateProductSlider() {
+    const track = document.getElementById("productSliderTrack");
+    const dots = document.querySelectorAll(".slider-dot");
+    track.style.transform = `translateX(-${page * 100}%)`;
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === page));
+}
+
+function startProductSliderAutoPlay() {
+    if (productSliderInterval) clearInterval(productSliderInterval);
+    productSliderInterval = setInterval(() => {
+        moveSlider(1);
+    }, 4000); // Change page every 4 seconds
+}
+
+function initProductSlider() {
+    startProductSliderAutoPlay();
+    // Touch/swipe support for mobile
+    let startX = 0;
+    let endX = 0;
+    const sliderContainer = document.querySelector('.slider-container');
+    sliderContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+    sliderContainer.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+    });
+    function handleSwipe() {
+        const threshold = 50;
+        const diff = startX - endX;
+        if (Math.abs(diff) > threshold) {
+            if (diff > 0) {
+                moveSlider(1); // Swipe left, go to next
+            } else {
+                moveSlider(-1); // Swipe right, go to previous
+            }
+        }
+    }
+}

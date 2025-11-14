@@ -762,6 +762,171 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         gap: 10px;
     }
+    
+    /* Slider responsive adjustments */
+    .product-slider {
+        padding: 0 20px;
+    }
+    
+    .product-ad-card {
+        height: 400px;
+    }
+    
+    .slider-controls {
+        display: none; /* Hide arrows on mobile, use swipe */
+    }
+}
+
+.product-slider-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    overflow: hidden;
+}
+
+.product-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.slider-container {
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    width: auto; /* Let flex decide width */
+}
+
+.product-slide {
+    flex: 0 0 calc((100% - 60px) / 3); /* 2 gaps = 60px for 3 slides */
+    max-width: calc((100% - 60px) / 3);
+    box-sizing: border-box;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* No padding here */
+}
+
+.product-ad-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* Remove margin */
+}
+
+.product-ad-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    transition: none;
+}
+
+.product-ad-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 40px 30px 30px;
+    text-align: center;
+    opacity: 1;
+    transform: none;
+    transition: none;
+    z-index: 2;
+}
+
+.product-ad-title, .product-ad-subtitle, .product-ad-btn {
+    opacity: 1;
+    transition: none;
+}
+
+.product-ad-card:hover .product-ad-overlay,
+.product-ad-card:hover .product-ad-image {
+    transform: none;
+    opacity: 1;
+    box-shadow: none;
+}
+
+/* Slider Controls */
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.slider-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    pointer-events: all;
+}
+
+.slider-btn:hover {
+    background: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.prev-btn {
+    left: -25px;
+}
+
+.next-btn {
+    right: -25px;
+}
+
+/* Slider Dots */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-dot.active,
+.slider-dot:hover {
+    background: #d4af37;
+    transform: scale(1.2);
 }
 
 @media (max-width: 480px) {
@@ -808,8 +973,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Video Styles */
 .hero-video, .product-video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+   
     border-radius: 20px;
 }
 
